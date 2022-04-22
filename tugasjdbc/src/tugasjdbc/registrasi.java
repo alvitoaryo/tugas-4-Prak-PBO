@@ -21,7 +21,7 @@ public class registrasi extends javax.swing.JFrame {
      */
     public registrasi() {
         initComponents();
-        txID.setEnabled(false);
+        txid.setEnabled(false);
         autonumber();
     }
 private void autonumber(){
@@ -32,19 +32,19 @@ private void autonumber(){
             ResultSet r = s.executeQuery(sql);
             if (r.next()) {
                 String NoID = r.getString("id").substring(2);
-                String ID = "" +(Integer.parseInt(NoID)+1);
-                String Zero = "";
+                String IDN = "" +(Integer.parseInt(NoID)+1);
+                String num = "";
                 
-                if (ID.length()==1) 
-                {Zero = "00";}
-                else if(ID.length()==2)
-                {Zero = "0";}
-                else if(ID.length()==3)
-                {Zero = "";}
+                if (IDN.length()==1) 
+                {num = "00";}
+                else if(IDN.length()==2)
+                {num = "0";}
+                else if(IDN.length()==3)
+                {num = "";}
                 
-                txID.setText("AD" + Zero + ID);
+                txid.setText("A" + num + IDN);
             }else{
-                txID.setText("AD001");
+                txid.setText("A001");
             }
             r.close();
             s.close();
@@ -68,7 +68,7 @@ private void autonumber(){
         txpass = new javax.swing.JPasswordField();
         register = new javax.swing.JButton();
         jTextField3 = new javax.swing.JTextField();
-        txID = new javax.swing.JTextField();
+        txid = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,7 +112,7 @@ private void autonumber(){
                         .addGap(46, 46, 46)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txuser)
-                            .addComponent(txID, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)))
+                            .addComponent(txid, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(142, 142, 142)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,7 +126,7 @@ private void autonumber(){
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -163,7 +163,7 @@ private void autonumber(){
 
     private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
         // TODO add your handling code here:
-        String id = txID.getText().toString().trim();
+        String id = txid.getText().toString().trim();
         String username = txuser.getText().toString().trim();
         String password = txpass.getText().toString().trim();
         
@@ -232,7 +232,7 @@ private void autonumber(){
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JButton register;
-    private javax.swing.JTextField txID;
+    private javax.swing.JTextField txid;
     private javax.swing.JPasswordField txpass;
     private javax.swing.JTextField txuser;
     // End of variables declaration//GEN-END:variables
