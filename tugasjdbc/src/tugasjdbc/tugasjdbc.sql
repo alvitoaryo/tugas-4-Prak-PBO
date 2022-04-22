@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 21 Apr 2022 pada 15.48
+-- Waktu pembuatan: 22 Apr 2022 pada 04.58
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.10
 
@@ -32,14 +32,6 @@ CREATE TABLE `mahasiswa` (
   `Username` varchar(99) NOT NULL,
   `Password` varchar(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `mahasiswa`
---
-
-INSERT INTO `mahasiswa` (`id`, `Username`, `Password`) VALUES
-('AD001', 'asdf', '1234'),
-('AD002', 'qwer', '2345');
 
 --
 -- Indexes for dumped tables
